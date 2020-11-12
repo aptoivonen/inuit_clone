@@ -18,7 +18,7 @@
           >I forgot my User ID or Password</a
         >
       </div>
-      <button class="header__sign-in-button" type="button">
+      <button class="header__sign-in-button intuit-button" type="button">
         <i class="header__sign-in-icon"></i>
         Sign In
       </button>
@@ -26,11 +26,26 @@
     <main class="main">
       <header class="main__header">
         <a class="main__intuit-logo" href="#"></a>
-        <div class="main__site-links">
-          <a class="main__mint-link" href="#"></a>
-          <a class="main__quickbook-link" href="#"></a>
-          <a class="main__turbotax-link" href="#"></a>
-        </div>
+        <ul class="main__site-link-list">
+          <li class="main__site-link-item">
+            <a class="main__mint-link" href="#">
+              <i class="main__mint-icon-1"></i>
+              <i class="main__mint-icon-2"></i>
+            </a>
+          </li>
+          <li class="main__site-link-item">
+            <a class="main__quickbooks-link" href="#">
+              <i class="main__quickbooks-icon-1"></i>
+              <i class="main__quickbooks-icon-2"></i>
+            </a>
+          </li>
+          <li class="main__site-link-item">
+            <a class="main__turbotax-link" href="#">
+              <i class="main__turbotax-icon-1"></i>
+              <i class="main__turbotax-icon-2"></i>
+            </a>
+          </li>
+        </ul>
       </header>
       <form class="inuit-form">
         <h1>Create an Intuit account</h1>
@@ -94,7 +109,9 @@
             id="confirm-password"
           />
         </div>
-        <button type="submit">Create Account</button>
+        <button class="inuit-form__submit-button intuit-button" type="submit">
+          Create Account
+        </button>
         <small
           >By clicking Create Account, you agree to our
           <a href="#">Terms</a> and have read and acknowledge our

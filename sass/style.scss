@@ -3,6 +3,21 @@
 @import "main";
 @import "footer";
 
+html {
+  font: 400 16px Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #eceef1;
+}
+
 .hide {
   display: none;
+}
+
+.intuit-button {
+  font-family: inherit;
+  border-radius: 4px;
+  background-color: #0077c5;
+  color: #fff;
 }
