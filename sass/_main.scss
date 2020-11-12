@@ -1,0 +1,14 @@
+.inuit-form {
+  display: flex;
+  flex-direction: column;
+
+  &__have-account {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    &__have-account {
+      display: block;
+    }
+  }
+}

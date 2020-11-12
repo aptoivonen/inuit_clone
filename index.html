@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.min.css" />
+    <meta name="description" content="Inuit signup clone using html and css." />
+    <meta name="author" content="Aleksi Toivonen" />
+    <title>Inuit Signup clone</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__reminder">
+        <span class="header__reminder-text"
+          >Already have an Intuit account?</span
+        >
+        <a class="header__reminder-link" href="#"
+          >I forgot my User ID or Password</a
+        >
+      </div>
+      <button class="header__sign-in-button" type="button">
+        <i class="header__sign-in-icon"></i>
+        Sign In
+      </button>
+    </header>
+    <main class="main">
+      <header class="main__header">
+        <a class="main__intuit-logo" href="#"></a>
+        <div class="main__site-links">
+          <a class="main__mint-link" href="#"></a>
+          <a class="main__quickbook-link" href="#"></a>
+          <a class="main__turbotax-link" href="#"></a>
+        </div>
+      </header>
+      <form class="inuit-form">
+        <h1>Create an Intuit account</h1>
+        <p>One account for everything Intuit, including Mint.</p>
+        <a href="#">Learn more</a>
+        <div class="inuit-form__have-account">
+          <span class="inuit-form__have-account-text"
+            >Already have an account?</span
+          >
+          <a class="inuit-form__have-account-link" href="#">Sign In</a>
+        </div>
+        <label for="email">Email address</label>
+        <input type="email" name="email" id="email" />
+        <span class="inuit-form__email-error"></span>
+        <label for="phone">Phone (recommended)</label>
+        <input type="tel" name="phone" id="phone" />
+        <small>Standard call, messaging or data rates may apply.</small>
+        <span class="inuit-form__phone-recommendation"
+          >We strongly recommend adding a phone number. This will help verify
+          your account and keep it safe.</span
+        >
+        <span class="inuit-form__phone-error"
+          >Please enter a valid phone number including area code</span
+        >
+        <div class="inuit-form__phone-verify-text-msg">
+          <input
+            type="checkbox"
+            name="verify-text-msg"
+            id="verify-text-msg"
+            checked
+          />
+          <label for="verify-text-msg"
+            >Verify with text message <em>(most secure)</em></label
+          >
+        </div>
+        <label class="inuit-form__password-label" for="password"
+          >Password</label
+        >
+        <input
+          class="inuit-form__password-input"
+          type="password"
+          name="password"
+          id="password"
+        />
+        <div class="inuit-form__password-patterns hide">
+          <small>Use 8 or more characters</small>
+          <small>Use upper and lower case letters (e.g. Aa)</small>
+          <small>Use a number (e.g. 1234)</small>
+          <small>Use a symbol (e.g. !@#$)</small>
+        </div>
+        <div class="inuit-form__confirm-password hide">
+          <label
+            class="inuit-form__confirm-password-label"
+            for="confirm-password"
+            >Confirm password</label
+          >
+          <input
+            class="inuit-form__confirm-password-input"
+            type="password"
+            name="confirm-password"
+            id="confirm-password"
+          />
+        </div>
+        <button type="submit">Create Account</button>
+        <small
+          >By clicking Create Account, you agree to our
+          <a href="#">Terms</a> and have read and acknowledge our
+          <a href="#">Global Privacy Statement.</a></small
+        >
+        <footer>
+          <small>
+            Invisible reCAPTCHA by Google <a href="#">Privacy Policy</a> and
+            <a href="#">Terms of Use.</a>
+          </small>
+        </footer>
+      </form>
+    </main>
+    <footer class="footer">
+      <ul>
+        <li><a href="#">Legal</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Security</a></li>
+      </ul>
+      <p>
+        © 2020 Intuit, Inc. All rights reserved. Intuit, QuickBooks, QB,
+        TurboTax, ProConnect and Mint are registered trademarks of Intuit Inc.
+      </p>
+      <p>
+        Terms and conditions, features, support, pricing, and service options
+        subject to change without notice.
+      </p>
+    </footer>
+    <a class="privacy" href="#">Privacy Settings</a>
+  </body>
+</html>
