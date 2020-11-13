@@ -1,10 +1,8 @@
 @import "resets";
-@import "header";
-@import "main";
-@import "footer";
+@import "variables";
 
 html {
-  font: 400 16px Arial, Helvetica, sans-serif;
+  font: 400 16px $inuit-font-family;
 }
 
 body {
@@ -15,9 +13,18 @@ body {
   display: none;
 }
 
+.intuit-link {
+  font: 400 12px $inuit-font-family;
+}
+
 .intuit-button {
   font-family: inherit;
   border-radius: 4px;
   background-color: #0077c5;
   color: #fff;
 }
+
+@import "header";
+@import "main";
+@import "form";
+@import "footer";

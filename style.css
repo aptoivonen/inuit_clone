@@ -19,6 +19,29 @@ a {
   text-decoration: none;
 }
 
+html {
+  font: 400 16px Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #eceef1;
+}
+
+.hide {
+  display: none;
+}
+
+.intuit-link {
+  font: 400 12px Arial, Helvetica, sans-serif;
+}
+
+.intuit-button {
+  font-family: inherit;
+  border-radius: 4px;
+  background-color: #0077c5;
+  color: #fff;
+}
+
 .header {
   display: none;
   height: 56px;
@@ -71,8 +94,14 @@ a {
   margin-right: 9px;
 }
 
+.main {
+  width: 100%;
+  margin: 0 auto;
+}
+
 .main__header {
-  margin-bottom: 15px;
+  width: fit-content;
+  margin: 0 auto 15px;
 }
 
 .main__intuit-logo {
@@ -120,52 +149,83 @@ a {
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3NCIgaGVpZ2h0PSIxNiI+PHBhdGggZmlsbD0iIzZCNkM3MiIgZD0iTTMuOTM1IDYuNTI4aDIuNTQ3djEuMUgzLjkzNXY1LjI2N2MwIDEuMzUxLjU2IDEuNjYgMS4zNSAxLjY2LjM2NyAwIC43OTItLjExNiAxLjE0LS4yOWwuMDU3IDEuMTM5Yy0uNDYzLjE3NC0uOTQ1LjI3LTEuNTQ0LjI3LS45NjQgMC0yLjMxNS0uNDI1LTIuMzE1LTIuNDEyVjcuNjI4SC43NTF2LTEuMWgxLjg3MlYzLjk4aDEuMzEydjIuNTQ4em0xMi40MiAwaC0xLjMxMnY0LjYzYzAgMi40MTMtMS4zNSAzLjUzMi0yLjc0IDMuNTMyLTEuODkgMC0yLjQ1LTEuMjczLTIuNDUtMy4xNjVWNi41MjhIOC41NHY1LjUzN2MwIDIuMjM4IDEuMTQgMy43MjUgMy40MzUgMy43MjUgMS4yNzQgMCAyLjU4Ni0uNzM0IDMuMDg4LTEuNzc2aC4wMzhjMCAuMzg2LjAzOSAxLjA2Mi4wNzcgMS41NDRoMS4yNTRhMjUuMjY4IDI1LjI2OCAwIDAgMS0uMDc3LTEuOTg3VjYuNTI4ek0yMC44IDguMDcyaC0uMDM4YzAtLjM4Ny0uMDM5LTEuMDYyLS4wNzctMS41NDRoLTEuMjU1Yy4wNTguNjE3LjA3OCAxLjUwNS4wNzggMS45ODd2Ny4wNDNoMS4zMTJ2LTQuNjMxYzAtMi40MTIgMS4yNTMtMy40MTYgMi42NDMtMy40MTYuMzQ3IDAgLjc3MS4wNTguOTI2LjExN2wuMTc0LTEuMjM1Yy0uMjctLjA3Ny0uNTQtLjA5Ny0uODY4LS4wOTctMS4yNzQgMC0yLjM5My43MzMtMi44OTUgMS43NzZ6bTE1LjA0MiAyLjk3YzAgMi42NjQtMS44NTIgNC43NDgtNC42NyA0Ljc0OC0xLjI5MiAwLTIuNjQzLS42MTgtMy40MTUtMS43NTZoLS4wMzh2MS41MjRoLTEuMzEyVi45NzFoMS4zMTJ2Ny4xMmguMDM4Yy43NzItMS4xNzcgMi4xMjMtMS43OTUgMy40MTYtMS43OTUgMi44MTcgMCA0LjY3IDIuMDg0IDQuNjcgNC43NDd6bS0xLjM5IDBjMC0yLjAwNi0xLjIzNC0zLjY0Ni0zLjQxNC0zLjY0Ni0yLjAyNiAwLTMuNDczIDEuNTgyLTMuNDczIDMuNjQ3IDAgMi4wNjUgMS40NDcgMy42MjcgMy40NzMgMy42MjcgMi4xOCAwIDMuNDE1LTEuNjIgMy40MTUtMy42Mjd6bTEyLjcyMiAwYzAgMi43MjItMi4wMDcgNC43NDgtNC44MjQgNC43NDgtMi43OTggMC00LjgwNC0yLjAyNi00LjgwNC00Ljc0NyAwLTIuNzIgMi4wMDYtNC43NDcgNC44MDQtNC43NDcgMi44MTcgMCA0LjgyNCAyLjAyNiA0LjgyNCA0Ljc0N3ptLTEuMzkgMGMwLTIuMDI1LTEuMzMtMy42NDYtMy40MzQtMy42NDYtMi4wODQgMC0zLjQxNSAxLjYyLTMuNDE1IDMuNjQ3IDAgMi4wMjYgMS4zMzEgMy42MjcgMy40MTUgMy42MjcgMi4xMDMgMCAzLjQzNS0xLjYwMSAzLjQzNS0zLjYyN3ptNS42My03LjA2MmgtMS4zMTF2Mi41NDhINDguMjN2MS4xaDEuODcydjUuNjM0YzAgMS45ODcgMS4zNSAyLjQxMSAyLjMxNSAyLjQxMS41OTkgMCAxLjA4LS4wOTUgMS41NDQtLjI2OWwtLjA1OC0xLjEzOWMtLjM0Ny4xNzQtLjc3Mi4yOS0xLjEzOS4yOS0uNzkgMC0xLjM1LS4zMDktMS4zNS0xLjY2VjcuNjI4aDIuNTQ3di0xLjFoLTIuNTQ3VjMuOTh6bTExLjgwMyA5LjU1MmMwIC42OTQuMDU4IDEuNTI0LjE1NCAyLjAyNmgtMS4xNzdhOC45MzggOC45MzggMCAwIDEtLjEzNS0xLjQ2N2gtLjAzOGMtLjgzIDEuMTk3LTEuODM0IDEuNjk5LTMuMjggMS42OTktMS4zNyAwLTMuMTI3LS43MzQtMy4xMjctMi43NCAwLTIuNzc5IDMuMDY4LTMuMDMgNi4zNjgtMy4wM3YtLjI5YzAtMS41NjItLjg0OS0yLjMzNC0yLjQxMi0yLjMzNC0xLjA2MiAwLTIuMDQ1LjQyNC0yLjY4MiAxLjA2MWwtLjczMy0uODY4Yy43MzMtLjczNCAyLjAwNi0xLjI5MyAzLjU1LTEuMjkzIDEuOTQ5IDAgMy41MTIgMS4wODEgMy41MTIgMy4yOHYzLjk1NnptLTEuMjM1LTIuNDloLS4zODZjLTIuMTQyIDAtNC42MzEuMjMyLTQuNjMxIDEuOTUgMCAxLjI5MyAxLjEgMS43MTcgMi4xMjIgMS43MTcgMS44NTMgMCAyLjg5NS0xLjM5IDIuODk1LTIuOTl2LS42NzZ6bTguMDMtLjIxMWwzLjI3OS00LjMwM2gtMS41ODJsLTIuNDcgMy40MzQtMi40Ny0zLjQzNEg2NS4wOWwzLjMzOCA0LjM2LTMuNTUgNC42N2gxLjU4M2wyLjc2LTMuNzYzIDIuNjgxIDMuNzYzSDczLjZsLTMuNTg5LTQuNzI3eiIvPjwvc3ZnPg==);
 }
 
-.inuit-form {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin: 0 auto;
-  background-color: #fff;
-}
-
-.inuit-form__have-account {
-  display: none;
-}
-
 @media screen and (min-width: 380px) {
-  .inuit-form {
+  .main {
     width: 90%;
     min-width: 380px;
   }
 }
 
 @media screen and (min-width: 480px) {
-  .inuit-form {
+  .main {
     width: 380px;
   }
 }
 
+.inuit-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 30px;
+  font-size: 14px;
+  background-color: #fff;
+  border-radius: 2px;
+  border: 1px solid #c7c7c7;
+}
+
+.inuit-form__header {
+  margin-bottom: 20px;
+  color: #4c4c4c;
+}
+
+.inuit-form__heading {
+  margin: 0;
+  font-size: 24px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.inuit-form__header-info-text {
+  margin: 20px 0 0;
+  text-align: center;
+}
+
+.inuit-form__header-info-link {
+  display: block;
+  text-align: center;
+}
+
+.inuit-form__have-account {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.inuit-form__input {
+  width: 100%;
+  height: 34px;
+  padding: 0 6px 0 8px;
+  font-size: 16px;
+  line-height: 1.1;
+  color: #000;
+  border-radius: 3px;
+  border: 1px solid #c1c5c8;
+}
+
+.inuit-form__input:focus {
+  border: 1px solid #52a8ec;
+}
+
+.inuit-form__label {
+  padding-bottom: 6px;
+  color: #444;
+}
+
+.inuit-form__error {
+  color: #eb3432;
+}
+
 @media screen and (min-width: 768px) {
   .inuit-form__have-account {
-    display: block;
+    display: none;
   }
-}
-
-html {
-  font: 400 16px Arial, Helvetica, sans-serif;
-}
-
-body {
-  background-color: #eceef1;
-}
-
-.hide {
-  display: none;
-}
-
-.intuit-button {
-  font-family: inherit;
-  border-radius: 4px;
-  background-color: #0077c5;
-  color: #fff;
 }
