@@ -9,10 +9,6 @@ body {
   background-color: #eceef1;
 }
 
-.hide {
-  display: none;
-}
-
 .intuit-link {
   font: 400 12px $inuit-font-family;
 }
@@ -28,3 +24,11 @@ body {
 @import "main";
 @import "form";
 @import "footer";
+
+.hide {
+  display: none;
+}
+
+.hidden {
+  visibility: hidden;
+}

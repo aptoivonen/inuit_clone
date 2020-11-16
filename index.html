@@ -65,57 +65,106 @@
             >
           </div>
         </header>
-        <label class="inuit-form__label" for="email">Email address</label>
-        <input class="inuit-form__input" type="email" name="email" id="email" />
-        <span class="inuit-form__error"
-          >Please enter a valid email address.</span
-        >
-        <label class="inuit-form__label" for="phone">Phone (recommended)</label>
-        <input class="inuit-form__input" type="tel" name="phone" id="phone" />
-        <small>Standard call, messaging or data rates may apply.</small>
-        <span class="inuit-form__phone-recommendation"
-          >We strongly recommend adding a phone number. This will help verify
-          your account and keep it safe.</span
-        >
-        <span class="inuit-form__error"
-          >Please enter a valid phone number including area code.</span
-        >
-        <div class="inuit-form__phone-verify-text-msg">
-          <input
-            class="inuit-form__input"
-            type="checkbox"
-            name="verify-text-msg"
-            id="verify-text-msg"
-            checked
-          />
-          <label class="inuit-form__label" for="verify-text-msg"
-            >Verify with text message <em>(most secure)</em></label
+        <fieldset class="inuit-form__group">
+          <label class="inuit-form__label" for="email">Email address</label>
+          <div class="inuit-form__input-wrapper">
+            <input
+              class="inuit-form__input"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="You'll verify this later"
+              required
+            />
+            <span class="inuit-form__error-icon"></span>
+          </div>
+          <span class="inuit-form__error"
+            >Please enter a valid email address.</span
           >
-        </div>
-        <label class="inuit-form__label" for="password">Password</label>
-        <input
-          class="inuit-form__input"
-          type="password"
-          name="password"
-          id="password"
-        />
-        <div class="inuit-form__password-patterns hide">
-          <small>Use 8 or more characters</small>
-          <small>Use upper and lower case letters (e.g. Aa)</small>
-          <small>Use a number (e.g. 1234)</small>
-          <small>Use a symbol (e.g. !@#$)</small>
-        </div>
-        <div class="inuit-form__confirm-password hide">
-          <label class="inuit-form__label" for="confirm-password"
-            >Confirm password</label
+        </fieldset>
+        <fieldset class="inuit-form__group">
+          <label class="inuit-form__label" for="phone"
+            >Phone (recommended)</label
           >
-          <input
-            class="inuit-form__input"
-            type="password"
-            name="confirm-password"
-            id="confirm-password"
-          />
-        </div>
+          <div class="inuit-form__input-wrapper">
+            <input
+              class="inuit-form__input"
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder="Helps with lost passwords and security"
+              pattern="\d{3}-\d{6}"
+            />
+            <span class="inuit-form__error-icon"></span>
+            <span class="inuit-form__warning-icon"></span>
+          </div>
+          <small class="inuit-form__phone-info-text" id="phone-info-text"
+            >Standard call, messaging or data rates may apply.</small
+          >
+          <span
+            class="inuit-form__phone-recommendation hide"
+            id="phone-recommendation"
+            >We strongly recommend adding a phone number. This will help verify
+            your account and keep it safe.</span
+          >
+          <span class="inuit-form__error"
+            >Please enter a valid phone number including area code.</span
+          >
+          <div
+            class="inuit-form__phone-verify-text-msg hide"
+            id="phone-verify-text-msg"
+          >
+            <input
+              class="inuit-form__checkbox"
+              type="checkbox"
+              name="verify-text-msg"
+              id="verify-text-msg"
+              checked
+            />
+            <label
+              class="inuit-form__label inuit-form__checkbox-label"
+              for="verify-text-msg"
+              >Verify with text message
+              <em class="inuit-form__phone-verify-em">(most secure)</em></label
+            >
+          </div>
+        </fieldset>
+        <fieldset class="inuit-form__group">
+          <label class="inuit-form__label" for="password">Password</label>
+          <div class="inuit-form__input-wrapper">
+            <input
+              class="inuit-form__input"
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Don't reuse an old password"
+              minlength="8"
+              required
+            />
+            <span class="inuit-form__lock-icon"></span>
+            <span class="inuit-form__error-lock-icon"></span>
+          </div>
+          <span class="inuit-form__error"></span>
+          <div class="inuit-form__password-patterns hide">
+            <small>Use 8 or more characters</small>
+            <small>Use upper and lower case letters (e.g. Aa)</small>
+            <small>Use a number (e.g. 1234)</small>
+            <small>Use a symbol (e.g. !@#$)</small>
+          </div>
+          <div class="inuit-form__confirm-password hide">
+            <label class="inuit-form__label" for="confirm-password"
+              >Confirm password</label
+            >
+            <div class="inuit-form__input-wrapper">
+              <input
+                class="inuit-form__input"
+                type="password"
+                name="confirm-password"
+                id="confirm-password"
+              />
+            </div>
+          </div>
+        </fieldset>
         <button class="inuit-form__submit-button intuit-button" type="submit">
           Create Account
         </button>
@@ -148,5 +197,6 @@
       </p>
     </footer>
     <a class="privacy" href="#">Privacy Settings</a>
+    <script src="index.js"></script>
   </body>
 </html>

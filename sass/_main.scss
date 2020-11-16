@@ -19,7 +19,7 @@
   margin: 0 auto;
 
   &__header {
-    width: fit-content;
+    width: min-content;
     margin: 0 auto 15px;
   }
 
@@ -34,7 +34,7 @@
 
   &__site-link-list {
     display: flex;
-    width: fit-content;
+    width: min-content;
     margin: 0 auto;
   }
 
