@@ -130,7 +130,7 @@
           >
         </div>
 
-        <fieldset class="inuit-form__group">
+        <fieldset class="inuit-form__group inuit-form__group--password">
           <label class="inuit-form__label" for="password">Password</label>
           <div class="inuit-form__input-wrapper">
             <input
@@ -145,14 +145,42 @@
             <span class="inuit-form__lock-icon"></span>
             <span class="inuit-form__error-lock-icon"></span>
           </div>
-          <span class="inuit-form__error hidden"></span>
-          <div class="inuit-form__password-patterns hide">
-            <small>Use 8 or more characters</small>
-            <small>Use upper and lower case letters (e.g. Aa)</small>
-            <small>Use a number (e.g. 1234)</small>
-            <small>Use a symbol (e.g. !@#$)</small>
+          <div
+            class="inuit-form__password-patterns hide"
+            id="password-patterns"
+          >
+            <ul class="inuit-form__password-patterns-list">
+              <li>
+                <small
+                  class="inuit-form__password-patterns-text"
+                  id="password-patterns-tooShort"
+                  >Use 8 or more characters</small
+                >
+              </li>
+              <li>
+                <small
+                  class="inuit-form__password-patterns-text"
+                  id="password-patterns-upper-lower"
+                  >Use upper and lower case letters (e.g. Aa)</small
+                >
+              </li>
+              <li>
+                <small
+                  class="inuit-form__password-patterns-text"
+                  id="password-patterns-number"
+                  >Use a number (e.g. 1234)</small
+                >
+              </li>
+              <li>
+                <small
+                  class="inuit-form__password-patterns-text"
+                  id="password-patterns-symbol"
+                  >Use a symbol (e.g. !@#$)</small
+                >
+              </li>
+            </ul>
           </div>
-          <div class="inuit-form__confirm-password hide">
+          <div class="inuit-form__confirm-password hide" id="confirm-password">
             <label class="inuit-form__label" for="confirm-password"
               >Confirm password</label
             >
@@ -164,6 +192,9 @@
                 id="confirm-password"
               />
             </div>
+            <span class="inuit-form__error hidden"
+              >Confirm password field does not match the password field.</span
+            >
           </div>
         </fieldset>
         <button class="inuit-form__submit-button intuit-button" type="submit">

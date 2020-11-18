@@ -20,6 +20,14 @@ const showRecommendationIcon = (element) => {
 const hideRecommendationIcon = (element) => {
   element.removeAttribute("data-recommendation");
 };
+const makePasswordPatternError = (element) => {
+  element.classList.remove("inuit-form__password-patterns-text--success");
+  element.classList.add("inuit-form__password-patterns-text--error");
+};
+const makePasswordPatternSuccess = (element) => {
+  element.classList.add("inuit-form__password-patterns-text--success");
+  element.classList.remove("inuit-form__password-patterns-text--error");
+};
 
 const emailInput = gebi("email");
 const emailErrorText = gebi("email-error-text");
@@ -58,4 +66,37 @@ phoneInput.addEventListener("focus", () => {
   show(phoneInfoText);
   show(phoneVerifyTextMsg);
   makeInvisible(phoneErrorText);
+});
+
+const passwordInput = gebi("password");
+const confirmPassword = gebi("confirm-password");
+const passwordPatterns = gebi("password-patterns");
+passwordInput.addEventListener("focus", () => {
+  show(confirmPassword);
+  show(passwordPatterns);
+});
+const passwordPatternTooShort = gebi("password-patterns-tooShort");
+const passwordPatternUpperLower = gebi("password-patterns-upper-lower");
+const passwordPatternNumber = gebi("password-patterns-number");
+const passwordPatternSymbol = gebi("password-patterns-symbol");
+passwordInput.addEventListener("blur", () => {
+  show(passwordPatterns);
+  if (!passwordInput.value.trim()) {
+    const texts = passwordPatterns.querySelectorAll(
+      ".inuit-form__password-patterns-text"
+    );
+    texts.forEach((el) => {
+      makePasswordPatternError(el);
+    });
+  } else {
+    if (passwordInput.validity.tooShort) {
+      makePasswordPatternError(passwordPatternTooShort);
+    } else {
+      makePasswordPatternSuccess(passwordPatternTooShort);
+    }
+    // Just validate error for the rest of the patterns
+    makePasswordPatternError(passwordPatternUpperLower);
+    makePasswordPatternError(passwordPatternNumber);
+    makePasswordPatternError(passwordPatternSymbol);
+  }
 });
