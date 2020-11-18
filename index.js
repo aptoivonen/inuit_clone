@@ -69,7 +69,7 @@ phoneInput.addEventListener("focus", () => {
 });
 
 const passwordInput = gebi("password");
-const confirmPassword = gebi("confirm-password");
+const confirmPassword = gebi("confirm-password-area");
 const passwordPatterns = gebi("password-patterns");
 passwordInput.addEventListener("focus", () => {
   show(confirmPassword);
@@ -99,4 +99,11 @@ passwordInput.addEventListener("blur", () => {
     makePasswordPatternError(passwordPatternNumber);
     makePasswordPatternError(passwordPatternSymbol);
   }
+});
+
+const confirmPasswordInput = gebi("confirm-password");
+const confirmPasswordErrorText = gebi("confirm-password-error-text");
+confirmPasswordInput.addEventListener("blur", () => {
+  makeVisible(confirmPasswordErrorText);
+  confirmPasswordInput.classList.add("inuit-form__input--confirm-password");
 });

@@ -364,6 +364,14 @@ body {
   display: block;
 }
 
+.inuit-form__input--confirm-password:not(:focus):invalid {
+  border: 1px solid #fd5653;
+}
+
+.inuit-form__input--confirm-password:not(:focus):invalid ~ .inuit-form__error-icon {
+  display: block;
+}
+
 @media screen and (min-width: 480px) {
   .inuit-form__input::placeholder {
     opacity: 0;

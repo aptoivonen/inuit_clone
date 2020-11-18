@@ -180,7 +180,10 @@
               </li>
             </ul>
           </div>
-          <div class="inuit-form__confirm-password hide" id="confirm-password">
+          <div
+            class="inuit-form__confirm-password hide"
+            id="confirm-password-area"
+          >
             <label class="inuit-form__label" for="confirm-password"
               >Confirm password</label
             >
@@ -190,10 +193,16 @@
                 type="password"
                 name="confirm-password"
                 id="confirm-password"
+                placeholder=" "
+                minlength="8"
+                required
               />
+              <span class="inuit-form__error-icon"></span>
             </div>
-            <span class="inuit-form__error hidden"
-              >Confirm password field does not match the password field.</span
+            <span
+              class="inuit-form__error hidden"
+              id="confirm-password-error-text"
+              >Please confirm the password.</span
             >
           </div>
         </fieldset>

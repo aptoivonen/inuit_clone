@@ -218,6 +218,14 @@
     display: block;
   }
 
+  &__input--confirm-password:not(:focus):invalid {
+    border: 1px solid #fd5653;
+  }
+
+  &__input--confirm-password:not(:focus):invalid ~ &__error-icon {
+    display: block;
+  }
+
   @media screen and (min-width: 480px) {
     &__input::placeholder {
       opacity: 0;
