@@ -82,7 +82,7 @@
             >Please enter a valid email address.</span
           >
         </fieldset>
-        <fieldset class="inuit-form__group">
+        <fieldset class="inuit-form__group inuit-form__group--phone">
           <label class="inuit-form__label" for="phone"
             >Phone (recommended)</label
           >
@@ -110,25 +110,26 @@
           <span class="inuit-form__error hidden" id="phone-error-text"
             >Please enter a valid phone number including area code.</span
           >
-          <div
-            class="inuit-form__phone-verify-text-msg hide"
-            id="phone-verify-text-msg"
-          >
-            <input
-              class="inuit-form__checkbox"
-              type="checkbox"
-              name="verify-text-msg"
-              id="verify-text-msg"
-              checked
-            />
-            <label
-              class="inuit-form__label inuit-form__checkbox-label"
-              for="verify-text-msg"
-              >Verify with text message
-              <em class="inuit-form__phone-verify-em">(most secure)</em></label
-            >
-          </div>
         </fieldset>
+        <div
+          class="inuit-form__phone-verify-text-msg hide"
+          id="phone-verify-text-msg"
+        >
+          <input
+            class="inuit-form__checkbox"
+            type="checkbox"
+            name="verify-text-msg"
+            id="verify-text-msg"
+            checked
+          />
+          <label
+            class="inuit-form__label inuit-form__checkbox-label"
+            for="verify-text-msg"
+            >Verify with text message
+            <em class="inuit-form__phone-verify-em">(most secure)</em></label
+          >
+        </div>
+
         <fieldset class="inuit-form__group">
           <label class="inuit-form__label" for="password">Password</label>
           <div class="inuit-form__input-wrapper">
