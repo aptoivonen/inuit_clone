@@ -226,6 +226,27 @@
     display: block;
   }
 
+  &__submit-button {
+    padding: 13px;
+    margin-bottom: 30px;
+    transform: scale(1);
+    font-size: 16px;
+    border: none;
+  }
+
+  &__submit-button:focus,
+  &__submit-button:active {
+    transform: scale(0.96);
+  }
+
+  &__terms-text {
+    margin-bottom: 30px;
+    line-height: 1.8;
+    font-style: italic;
+    text-align: center;
+    color: #757575;
+  }
+
   @media screen and (min-width: 480px) {
     &__input::placeholder {
       opacity: 0;
