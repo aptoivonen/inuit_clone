@@ -7,11 +7,11 @@
   @extend %icon;
   width: 23px;
   height: 23px;
+  margin-right: 4px;
 }
 
 %icon-2 {
   @extend %icon;
-  margin-right: 9px;
 }
 
 .main {
@@ -36,6 +36,15 @@
     display: flex;
     width: min-content;
     margin: 0 auto;
+  }
+
+  &__site-link-item {
+    margin-left: 9px;
+  }
+
+  &__site-link {
+    display: flex;
+    align-items: center;
   }
 
   &__mint-icon-1 {

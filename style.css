@@ -85,10 +85,7 @@ body {
 .main__mint-icon-1, .main__quickbooks-icon-1, .main__turbotax-icon-1 {
   width: 23px;
   height: 23px;
-}
-
-.main__mint-icon-2, .main__quickbooks-icon-2, .main__turbotax-icon-2 {
-  margin-right: 9px;
+  margin-right: 4px;
 }
 
 .main {
@@ -114,6 +111,15 @@ body {
   display: flex;
   width: min-content;
   margin: 0 auto;
+}
+
+.main__site-link-item {
+  margin-left: 9px;
+}
+
+.main__site-link {
+  display: flex;
+  align-items: center;
 }
 
 .main__mint-icon-1 {
