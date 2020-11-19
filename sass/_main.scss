@@ -38,7 +38,7 @@
     margin: 0 auto;
   }
 
-  &__site-link-item {
+  &__site-link-item + &__site-link-item {
     margin-left: 9px;
   }
 
